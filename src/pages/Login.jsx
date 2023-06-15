@@ -19,7 +19,7 @@ export default function Login() {
           <span className="text-600 font-medium line-height-3">
             Don't have an account?
           </span>
-          <Link className="font-medium no-underline ml-2 text-blue-500 cursor-pointer">
+          <Link  to="/register" className="font-medium no-underline ml-2 text-blue-500 cursor-pointer">
             Create today!
           </Link>
         </div>

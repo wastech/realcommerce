@@ -22,10 +22,10 @@ export default function NewArrival() {
     },
     {
       id: 2,
-      title: "good cloths",
+      title: "wall clock",
       price: 340,
       imageUrl:
-        "https://ciseco-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.addcba21.png&w=750&q=75",
+        "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-6-550x550.jpg",
     },
 
     {
@@ -33,7 +33,7 @@ export default function NewArrival() {
       title: "good cloths",
       price: 340,
       imageUrl:
-        "https://ciseco-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.addcba21.png&w=750&q=75",
+        "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-5-550x550.jpg",
     },
 
     {
@@ -41,15 +41,7 @@ export default function NewArrival() {
       title: "good cloths",
       price: 340,
       imageUrl:
-        "https://ciseco-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.addcba21.png&w=750&q=75",
-    },
-
-    {
-      id: 5,
-      title: "good cloths",
-      price: 340,
-      imageUrl:
-        "https://ciseco-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.addcba21.png&w=750&q=75",
+        "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-3-1-550x550.jpg",
     },
   ];
 

@@ -15,10 +15,13 @@ export default function Register() {
           />
           <div className="text-900 text-3xl font-medium mb-3">Welcome Back</div>
           <span className="text-600 font-medium line-height-3">
-            Don't have an account?
+            have an account?
           </span>
-          <Link className="font-medium no-underline ml-2 text-blue-500 cursor-pointer">
-            Create today!
+          <Link
+            to="/login"
+            className="font-medium no-underline ml-2 text-blue-500 cursor-pointer"
+          >
+            Login
           </Link>
         </div>
 
