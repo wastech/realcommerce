@@ -5,9 +5,12 @@ export default function AppHeader() {
   const items = [
     {
       label: "Home",
+      url: "/",
     },
+
     {
-      label: "Men",
+      label: "Products",
+      url: "/products",
     },
     {
       label: "Women",
@@ -34,6 +37,7 @@ export default function AppHeader() {
       <Button
         label="Register"
         text
+        link="/login"
         size="small"
         className="text-600 font-light"
       />
@@ -41,7 +45,7 @@ export default function AppHeader() {
   );
 
   return (
-    <div className="w-11 m-auto my-5  ">
+    <div className="w-11 m-auto mt-5 mb-3 ">
       <Menubar
         model={items}
         start={start}
