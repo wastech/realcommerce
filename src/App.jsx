@@ -11,6 +11,7 @@ import NewArrival from "./components/NewArrival";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Products from "./pages/Products";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/" element={<NewArrival />} exact />
       </Routes>
     </Router>

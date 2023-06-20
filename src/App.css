@@ -15,3 +15,8 @@
 .section__card:hover  .add_to_chart{
   display:block
 }
+.product__image{
+  width: 100%;
+  object-fit: cover;
+  height: 80vh;
+}
