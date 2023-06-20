@@ -150,7 +150,7 @@ export default function Products() {
       <section className="product__section">
         <div className="grid">
           {data.map((item) => (
-            <div className="col-6 md:col-4 lg:col-3" key={item.id}>
+            <div className="col-12 md:col-5 lg:col-3" key={item.id}>
               <Card data={item} />
             </div>
           ))}
