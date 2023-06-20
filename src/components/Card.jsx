@@ -14,9 +14,9 @@ const Card = (props) => {
           />
         </div>
         <div className="title text-center -mt-2">
-          <h4 className="uppercase text-sm font-medium "> {data.title}</h4>
+          <h4 className="uppercase text-xs font-semibold "> {data.title}</h4>
           <p className="-mt-2 font-medium text-xs text-600 product_price">
-            {data.price}
+            ${data.price}
           </p>
           <p className="-mt-2 font-medium uppercase text-xs text-600 add_to_chart">
             add to chart

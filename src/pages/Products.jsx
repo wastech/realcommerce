@@ -1,84 +1,89 @@
-import React from "react";
-import { Toolbar } from "primereact/toolbar";
-import { SplitButton } from "primereact/splitbutton";
+import React, { useState } from "react";
+import Card from "../components/Card";
+import { Paginator } from "primereact/paginator";
+import { Dropdown } from "primereact/dropdown";
 
-const items = [
+const data = [
   {
-    label: "Update",
-    icon: "pi pi-refresh",
+    id: 1,
+    title: "good cloths",
+    price: 340,
+    imageUrl:
+      "https://ciseco-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.addcba21.png&w=750&q=75",
   },
   {
-    label: "Delete",
-    icon: "pi pi-times",
+    id: 2,
+    title: "wall clock",
+    price: 340,
+    imageUrl:
+      "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-6-550x550.jpg",
+  },
+
+  {
+    id: 3,
+    title: "good cloths",
+    price: 340,
+    imageUrl:
+      "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-5-550x550.jpg",
+  },
+
+  {
+    id: 4,
+    title: "good cloths",
+    price: 340,
+    imageUrl:
+      "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-3-1-550x550.jpg",
+  },
+
+  {
+    id: 5,
+    title: "good cloths",
+    price: 340,
+    imageUrl:
+      "https://ciseco-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F5.addcba21.png&w=750&q=75",
   },
   {
-    label: "React Website",
-    icon: "pi pi-external-link",
-    command: () => {
-      window.location.href = "https://reactjs.org/";
-    },
+    id: 6,
+    title: "wall clock",
+    price: 340,
+    imageUrl:
+      "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-6-550x550.jpg",
   },
+
   {
-    label: "Upload",
-    icon: "pi pi-upload",
-    command: () => {
-      //router.push('/fileupload');
-    },
+    id: 7,
+    title: "good cloths",
+    price: 340,
+    imageUrl:
+      "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-5-550x550.jpg",
+  },
+
+  {
+    id: 8,
+    title: "good cloths",
+    price: 340,
+    imageUrl:
+      "https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-3-1-550x550.jpg",
   },
 ];
 
 export default function Products() {
-  const startContent = (
-    <React.Fragment>
-      <SplitButton
-        label="Category"
-        icon="pi pi-plus"
-        className="mr-2"
-        model={items}
-        size="small"
-        severity="secondary"
-        rounded
-        outlined
-      />
+  const [selectedCity, setSelectedCity] = useState(null);
+  const cities = [
+    { name: "New York", code: "NY" },
+    { name: "Rome", code: "RM" },
+    { name: "London", code: "LDN" },
+    { name: "Istanbul", code: "IST" },
+    { name: "Paris", code: "PRS" },
+  ];
 
-      <SplitButton
-        label="size"
-        icon="pi pi-plus"
-        className="mr-2"
-        model={items}
-        size="small"
-        severity="secondary"
-        rounded
-        outlined
-      ></SplitButton>
+  const [first, setFirst] = useState(0);
+  const [rows, setRows] = useState(10);
 
-      <SplitButton
-        label="Category"
-        icon="pi pi-plus"
-        className="mr-2"
-        model={items}
-        size="small"
-        severity="secondary"
-        rounded
-        outlined
-      ></SplitButton>
-    </React.Fragment>
-  );
-
-  const endContent = (
-    <React.Fragment>
-      <SplitButton
-        label="Sort Order"
-        icon="pi pi-plus"
-        className="mr-2 text-sm"
-        model={items}
-        size="small"
-        severity="secondary"
-        rounded
-        outlined
-      />
-    </React.Fragment>
-  );
+  const onPageChange = (event) => {
+    setFirst(event.first);
+    setRows(event.rows);
+  };
 
   return (
     <section className="w-11 m-auto">
@@ -90,12 +95,75 @@ export default function Products() {
         </p>
       </div>
 
-      <section className="sub_nav_section mt-3 mb-2">
-        <Toolbar start={startContent} end={endContent} />
-      </section>
-      <div className="cl-2"></div>
+      <section className="sub_nav_section w-full mt-5 mb-4">
+        <div className="grid">
+          <div className="col-6 md:col-6 lg:col-2">
+            <Dropdown
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.value)}
+              options={cities}
+              optionLabel="name"
+              showClear
+              placeholder="Categories"
+              className="w-full  border-round-xl md:border-round-3xl"
+            />
+          </div>
 
-      <div className="cl-10"></div>
+          <div className="col-6 md:col-6 lg:col-2">
+            <Dropdown
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.value)}
+              options={cities}
+              optionLabel="name"
+              showClear
+              placeholder="Availability"
+              className="w-full  border-round-xl md:border-round-3xl"
+            />
+          </div>
+
+          <div className="col-6 md:col-6 lg:col-2">
+            <Dropdown
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.value)}
+              options={cities}
+              optionLabel="name"
+              showClear
+              placeholder="Price"
+              className="w-full  border-round-xl md:border-round-3xl"
+            />
+          </div>
+
+          <div class="col-6 lg:col-2 lg:col-offset-4">
+            <Dropdown
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.value)}
+              options={cities}
+              optionLabel="name"
+              showClear
+              placeholder="Sort Order"
+              className="w-full  border-round-xl md:border-round-3xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="product__section">
+        <div className="grid">
+          {data.map((item) => (
+            <div className="col-6 md:col-4 lg:col-3" key={item.id}>
+              <Card data={item} />
+            </div>
+          ))}
+        </div>
+        <div className="card">
+          <Paginator
+            first={first}
+            rows={rows}
+            totalRecords={10}
+            onPageChange={onPageChange}
+          />
+        </div>
+      </section>
     </section>
   );
 }

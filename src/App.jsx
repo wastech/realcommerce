@@ -15,7 +15,7 @@ import Products from "./pages/Products";
 function App() {
   return (
     <Router>
-      <AppHeader />;
+      <AppHeader />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />

@@ -45,7 +45,7 @@ export default function AppHeader() {
   );
 
   return (
-    <div className="w-11 m-auto mt-5 mb-3 ">
+    <div className="w-full  mb-1 md:w-11 m-auto md:mt-5 md:mb-3 ">
       <Menubar
         model={items}
         start={start}
