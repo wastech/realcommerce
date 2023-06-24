@@ -19,7 +19,10 @@ export default function Login() {
           <span className="text-600 font-medium line-height-3">
             Don't have an account?
           </span>
-          <Link  to="/register" className="font-medium no-underline ml-2 text-blue-500 cursor-pointer">
+          <Link
+            to="/register"
+            className="font-medium no-underline ml-2 text-blue-500 cursor-pointer"
+          >
             Create today!
           </Link>
         </div>
@@ -32,7 +35,7 @@ export default function Login() {
             id="email"
             type="text"
             placeholder="Email address"
-            className="w-full mb-3"
+            className="w-full mb-3 outline-none"
           />
 
           <label htmlFor="password" className="block text-900 font-medium mb-2">

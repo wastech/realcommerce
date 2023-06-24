@@ -12,6 +12,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
+import Footer from "./components/AppFooter";
 
 function App() {
   return (
@@ -22,8 +24,10 @@ function App() {
         <Route path="/Register" element={<Register />} />
         <Route path="/products" element={<Products />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<NewArrival />} exact />
       </Routes>
+      <Footer />
     </Router>
   );
 }
