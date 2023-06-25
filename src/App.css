@@ -40,3 +40,19 @@
 .gold-rating .p-rating-icon {
   color: gold !important;
 }
+
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+

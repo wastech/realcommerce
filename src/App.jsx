@@ -14,6 +14,7 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Footer from "./components/AppFooter";
+import Index from "./admin/Index";
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/" element={<NewArrival />} exact />
+
+        <Route path="/dashboard" element={<Index />}>
+          <Route path="" element={<Product />} />
+        </Route>
       </Routes>
       <Footer />
     </Router>

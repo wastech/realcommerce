@@ -3,17 +3,26 @@ import React, { useState } from "react";
 import { InputNumber } from "primereact/inputnumber";
 import { Rating } from "primereact/rating";
 import { Button } from "primereact/button";
+import { BreadCrumb } from "primereact/breadcrumb";
 import { TabView, TabPanel } from "primereact/tabview";
 import RelatedProduct from "../components/RelatedProduct";
 
 import "../App.css";
 
 export default function Product() {
+  const items = [
+  
+    { label: "Accessories" },
+    { label: "Backpacks" },
+    { label: "Item" },
+  ];
+ 
   const [value2, setValue2] = useState(1);
 
   return (
     <article className="surface-50">
       <section className="product__section w-full  md:w-11 m-auto my-2 pt-5">
+        <BreadCrumb model={items}   className="mb-3 border-none bg-surface-50"/>
         <div className="grid ">
           <div className="col-12 md:col-12 lg:col-6">
             <div className="image">

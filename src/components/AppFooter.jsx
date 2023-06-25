@@ -1,4 +1,11 @@
+import { useLocation } from "react-router-dom";
 export default function Footer() {
+  const location = useLocation();
+
+  // Check if the current route is '/dashboard'
+  if (location.pathname === '/dashboard') {
+    return null; // Don't render the navbar on the dashboard route
+  }
   const data = [
     {
       id: 1,

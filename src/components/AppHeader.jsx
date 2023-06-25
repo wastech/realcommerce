@@ -1,7 +1,15 @@
 import React from "react";
 import { Menubar } from "primereact/menubar";
+import { useLocation } from "react-router-dom";
 import { Button } from "primereact/button";
 export default function AppHeader() {
+  const location = useLocation();
+
+  // Check if the current route is '/dashboard'
+  if (location.pathname === "/dashboard") {
+    return null; // Don't render the navbar on the dashboard route
+  }
+
   const items = [
     {
       label: "Home",
